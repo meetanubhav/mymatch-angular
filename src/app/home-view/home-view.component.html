@@ -1,0 +1,29 @@
+<h3>We match better!</h3>
+<h5>Our top matches</h5>
+<div class="row">
+  <div class="card col-md-4" *ngFor="let user of user">
+    <img src="https://thispersondoesnotexist.com" class="card-img-top" alt="pro">
+    <div class="card-body">
+      <h3 class="card-title text-primary" [title]="user.name + ' is' + ' 22 years'" >{{user.name}}</h3>
+      <p class="card-text"> {{user.age}} </p>
+      <p> {{user.description}} </p>
+      <a class="btn btn-primary text-white" (click)="liked()" >Date me</a>
+      <a class="btn btn-danger text-white" (click)="disliked()" >Not my type</a>
+    </div>
+  </div>
+</div>
+<!-- 
+<div class="row">
+  <div class="col-md-4 col-sm-12" *ngFor="let user of user">
+   <h3>
+    <a [title]="user.name + ' is interested'">
+      {{ user.name }}
+    </a>
+  </h3>
+  <p> Age: {{user.age}} </p>
+  <p *ngIf="user.description"> {{user.description}} </p>
+  
+  <button class="btn btn-primary" (click)="liked()">Date</button>
+  <button class="btn btn-danger" (click)="disliked()">Not my Type</button>
+  </div> 
+</div> -->
