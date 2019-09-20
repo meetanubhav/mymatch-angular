@@ -9,12 +9,14 @@ import { HelloComponent } from './hello.component';
 import { HomeViewComponent } from './home-view/home-view.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { FooterComponent } from './footer/footer.component';
+import { ProfileViewComponent } from './profile-view/profile-view.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,RouterModule.forRoot([
       { path: '', component: HomeViewComponent },
+      { path: 'user/:userId', component: ProfileViewComponent },
     ]) ],
-  declarations: [ AppComponent, HelloComponent, HomeViewComponent, TopBarComponent, FooterComponent ],
+  declarations: [ AppComponent, HelloComponent, HomeViewComponent, TopBarComponent, FooterComponent, ProfileViewComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

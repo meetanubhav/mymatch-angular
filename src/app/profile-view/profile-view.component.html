@@ -1,0 +1,11 @@
+<div class="card" *ngIf="user">
+    <img src="{{user.avatar}}" class="card-img-top" alt="pro">
+    <div class="card-body">
+     <h3> {{user.name}} </h3>
+      <p class="card-text"> {{user.age}} </p>
+      <p> {{user.description}} </p>
+      <a class="btn btn-primary text-white" (click)="liked()" >Date me</a>
+      <a class="btn btn-danger text-white" (click)="disliked()" >Not my type</a>
+    </div>
+  </div>
+<app-footer></app-footer>
